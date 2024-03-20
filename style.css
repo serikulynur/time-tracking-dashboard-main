@@ -1,0 +1,158 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Blue: hsl(246, 80%, 60%);
+
+    --Light-red-work: hsl(15, 100%, 70%); /* work */
+    --Soft-Blue: hsl(195, 74%, 62%); /* play */
+    --Light-red-study: hsl(348, 100%, 68%); /* study */
+    --Lime-green: hsl(145, 58%, 55%); /* exercise */
+    --Violet: hsl(264, 64%, 52%); /* social */
+    --Soft-orange: hsl(43, 84%, 65%); /* self-care */
+
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+body {
+    font-family: 'Rubik', 'sans-serif';
+    display: grid;
+    place-content: center;
+    background-color: var(--Very-dark-blue);
+    color: white;
+}
+
+.container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 40%);
+    padding: 10rem 5rem 0;
+    width: 80%;
+    justify-self: center;
+}
+
+.container-report {
+    grid-row: span 2;
+    display: grid;
+    grid-template-rows: 68% 32%;
+}
+
+.time-card {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-work {
+    background-color: var(--Light-red-work);
+}
+
+.container-play {
+    background-color: var(--Soft-Blue);
+}
+
+.container-study {
+    background-color: var(--Light-red-study);
+}
+
+.container-exercise {
+    background-color: var(--Lime-green);
+}
+
+.container-social {
+    background-color: var(--Violet);
+}
+
+.container-selfcare {
+    background-color: var(--Soft-orange);
+}
+
+.report {
+    background-color: var(--Blue);
+    padding: 2rem;
+}
+
+.card-main, .container-report {
+    background-color: var(--Dark-blue);
+}
+
+.title {
+    font-size: 1rem;
+}
+
+.hours {
+    font-size: 3rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.time-card, .container-report, .report {
+    border-radius: 1rem;
+}
+
+.card-main {
+    padding: 1rem 1.5rem;
+    z-index: 1;
+    align-self: self-end;
+}
+
+.period {
+    padding-left: 1.5rem;
+}
+
+.period button {
+    margin: 1.2rem 0;
+    display: block;
+    border: none;
+    background-color: var(--Dark-blue);
+    font-size: 1rem;
+}
+
+.user-image {
+    background-color: white;
+    border-radius: 50%;
+    width: 40%;
+    display: flex;
+    padding: 0.1rem;
+}
+
+.container-report img {
+    width: 100%;
+    place-content: center;
+}
+
+.report-text {
+    margin-top: 2rem;
+}
+
+.report h1 {
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
+.period button, .last, .report-text p {
+    color: var(--Pale-Blue);
+}
+
+.icon-container {
+    justify-self: end;
+    position: relative;
+    bottom: 0.5rem;
+    right: 0.5rem;
+
+}
+.container-exercise .icon-container {
+    top: 0;
+}
+
+.last, .report-text p {
+    font-size: 0.8rem;
+}
