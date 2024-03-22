@@ -16,6 +16,7 @@
 
     --Very-dark-blue: hsl(226, 43%, 10%);
     --Dark-blue: hsl(235, 46%, 20%);
+    --Dark-blue-hover: hsl(235, 46%, 35%);
     --Desaturated-blue: hsl(235, 45%, 61%);
     --Pale-Blue: hsl(236, 100%, 87%);
 }
@@ -26,53 +27,57 @@ body {
     place-content: center;
     background-color: var(--Very-dark-blue);
     color: white;
+    height: 100dvh;
 }
 
 .container {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 40%);
-    padding: 10rem 5rem 0;
-    width: 80%;
+    width: 70%;
     justify-self: center;
 }
 
 .container-report {
     grid-row: span 2;
     display: grid;
-    grid-template-rows: 68% 32%;
 }
 
 .time-card {
     display: grid;
-    grid-template-rows: 20% 80%;
-    position: relative;
-    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: top calc((-12 / 16) * 1rem) right calc((20 / 16) * 1rem);
 }
 
 .container-work {
     background-color: var(--Light-red-work);
+    background-image: url(/images/icon-work.svg);
 }
 
 .container-play {
     background-color: var(--Soft-Blue);
+    background-image: url(/images/icon-play.svg);
 }
 
 .container-study {
     background-color: var(--Light-red-study);
+    background-image: url(/images/icon-study.svg);
 }
 
 .container-exercise {
     background-color: var(--Lime-green);
+    background-image: url(/images/icon-exercise.svg);
+    background-position-y: 0;
 }
 
 .container-social {
     background-color: var(--Violet);
+    background-image: url(/images/icon-social.svg);
 }
 
 .container-selfcare {
     background-color: var(--Soft-orange);
+    background-image: url(/images/icon-self-care.svg);
 }
 
 .report {
@@ -80,12 +85,13 @@ body {
     padding: 2rem;
 }
 
-.card-main, .container-report {
+.card-main, .container-report  {
     background-color: var(--Dark-blue);
 }
 
 .title {
     font-size: 1rem;
+    position: relative;
 }
 
 .hours {
@@ -94,22 +100,24 @@ body {
     margin-bottom: 0.8rem;
 }
 
-.time-card, .container-report, .report {
+.time-card, .card-main, .container-report, .report {
     border-radius: 1rem;
 }
 
 .card-main {
-    padding: 1rem 1.5rem;
-    z-index: 1;
-    align-self: self-end;
+    padding: 1.5rem 2rem;
+    margin-top: 2.8rem;
 }
 
 .period {
-    padding-left: 1.5rem;
+    padding: 1.5rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .period button {
-    margin: 1.2rem 0;
     display: block;
     border: none;
     background-color: var(--Dark-blue);
@@ -142,17 +150,36 @@ body {
     color: var(--Pale-Blue);
 }
 
-.icon-container {
-    justify-self: end;
-    position: relative;
-    bottom: 0.5rem;
-    right: 0.5rem;
-
-}
-.container-exercise .icon-container {
-    top: 0;
-}
-
 .last, .report-text p {
     font-size: 0.8rem;
+}
+
+.ellipsis-container {
+    line-height: 1;
+    padding: 0 calc((1 / 16) * 1rem);
+}
+  
+svg:hover path {
+    fill: white;
+    cursor: pointer;
+}
+
+svg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.button:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.time-card:hover {
+    cursor: pointer; 
+}
+
+.time-card:hover .card-main {
+    background-color: var(--Dark-blue-hover);
+    cursor: pointer;
 }
