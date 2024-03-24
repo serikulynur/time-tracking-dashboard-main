@@ -13,78 +13,107 @@
   <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
 <body>
-  <div class="container">
-    <div class="container-report">
-      <div class="report">
-        <div class="user-image">
-            <img src="images/image-jeremy.png" alt="Jeremy">
-        </div>
-        <div class="report-text">
-            <p>Report for</p>
-            <h1>Jeremy Robson</h1>
-        </div>
-      </div>
-      <ul class="period">
-        <li>
-            <button class="button button-daily">Daily</button>
-        </li>
-        <li>
-            <button class="button button-weekly">Weekly</button>
-        </li>
-        <li>
-            <button class="button button-monthly">Monthly</button>
-        </li>
-      </ul>
-    </div>
-  
-    <div class="container-work time-card">
-        <div class="card-main">
-            <p class="title">Work <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg><p>
-            <p class="hours">32hrs</p>
-            <p class="last">Last week - 36hrs</p>
-        </div>
-    </div>
-  
-    <div class="container-play time-card">
-        <div class="card-main">
-            <p class="title">Play <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></p>
-            <p class="hours">10hrs</p>
-            <p class="last">Last week - 8hrs</p>
-        </div>
-    </div>
-  
-    <div class="container-study time-card">
-        <div class="card-main">
-            <p class="title">Study <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></p>
-            <p class="hours">4hrs</p>
-            <p class="last">Last week - 7hrs</p>
-        </div>
-    </div>
-  
-    <div class="container-exercise time-card">
-        <div class="card-main">
-            <p class="title">Exercise <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></p>
-            <p class="hours">4hrs</p>
-            <p class="last">Last week - 5hrs</p>
-        </div>
-    </div>
-  
-    <div class="container-social time-card">
-        <div class="card-main">
-            <p class="title">Social <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></p>
-            <p class="hours">5hrs</p>
-            <p class="last">Last week - 10hrs</p>
-        </div>
-    </div>
-  
-    <div class="container-selfcare time-card">
-        <div class="card-main">
-            <p class="title">Self Care <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></p>
-            <p class="hours">2hrs</p>
-            <p class="last">Last week - 2hrs</p>
-        </div>
-    </div>
-  </div>
-  
+    <main class="flex-center main">
+        <div class="container">
+            <div class="container-report min-width">
+              <div class="report">
+                <img class="user-image" src="images/image-jeremy.png" alt="Jeremy">
+                <div class="report-text">
+                    <p>Report for</p>
+                    <h1>Jeremy Robson</h1>
+                </div>
+              </div>
+              <ul class="period">
+                <li>
+                    <button class="button button-daily">Daily</button>
+                </li>
+                <li>
+                    <button class="button button-weekly">Weekly</button>
+                </li>
+                <li>
+                    <button class="button button-monthly">Monthly</button>
+                </li>
+              </ul>
+            </div>
+          
+            <div class="container-work time-card">
+                <div class="card-main">
+                    <div class="card-header">
+                        <p class="title">Work</p>
+                        <div class="ellipsis-container"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></div>
+                    </div>
+                    <div class="card-body">
+                        <p class="hours">32hrs</p>
+                        <p class="last">Last week - 36hrs</p>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="container-play time-card">
+                <div class="card-main">
+                    <div class="card-header">
+                        <p class="title">Play</p>
+                        <div class="ellipsis-container"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></div>
+                    </div>
+                    <div class="card-body">
+                        <p class="hours">10hrs</p>
+                        <p class="last">Last week - 8hrs</p>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="container-study time-card">
+                <div class="card-main">
+                    <div class="card-header">
+                        <p class="title">Study</p>
+                        <div class="ellipsis-container"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></div>
+                    </div>
+                    <div class="card-body">
+                        <p class="hours">4hrs</p>
+                        <p class="last">Last week - 7hrs</p>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="container-exercise time-card">
+                <div class="card-main">
+                    <div class="card-header">
+                        <p class="title">Exercise</p>
+                        <div class="ellipsis-container"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></div>
+                    </div>
+                    <div class="card-body">
+                        <p class="hours">4hrs</p>
+                        <p class="last">Last week - 5hrs</p>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="container-social time-card">
+                <div class="card-main">
+                    <div class="card-header">
+                        <p class="title">Social</p>
+                        <div class="ellipsis-container"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></div>
+                    </div>
+                    <div class="card-body">
+                        <p class="hours">5hrs</p>
+                        <p class="last">Last week - 10hrs</p>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="container-selfcare time-card">
+                <div class="card-main">
+                    <div class="card-header">
+                        <p class="title">Self Care</p>
+                        <div class="ellipsis-container"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></div>
+                    </div>
+                    <div class="card-body">
+                        <p class="hours">2hrs</p>
+                        <p class="last">Last week - 2hrs</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </main>
 </body>
 </html>
