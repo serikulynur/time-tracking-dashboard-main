@@ -156,7 +156,7 @@ main {
 
 .card-main {
     background-color: var(--Dark-blue);
-    margin-top: calc((35 / 16) * 1rem);
+    margin-top: calc((40 / 16) * 1rem);
     padding: calc((25 / 16) * 1rem);
     display: flex;
     flex-direction: column;
